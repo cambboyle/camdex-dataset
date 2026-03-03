@@ -2,12 +2,22 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "CamDex Species (initial)",
   "type": "object",
-  "required": ["id", "nid", "dexNum", "name"],
+  "required": ["id", "nid", "dexNum"],
+  "oneOf": [
+    { "required": ["name"] },
+    { "required": ["names"], "properties": { "names": { "type": "object", "required": ["eng"], "properties": { "eng": { "type": "string" } } } }
+  ],
   "properties": {
     "id": { "type": "string" },
     "nid": { "type": "string" },
     "dexNum": { "type": "integer" },
     "name": { "type": "string" },
+    "names": {
+      "type": "object",
+      "properties": {
+        "eng": { "type": "string" }
+      }
+    },
     "gen": { "type": "integer" },
     "type1": { "type": "string" },
     "type2": { "type": ["string", "null"] }
