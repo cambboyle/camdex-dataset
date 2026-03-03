@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "validate": "bun ./scripts/validate.ts",
+    "validate": "node ./scripts/validate.js",
     "format": "prettier --write '**/*.json'"
   },
   "devDependencies": {
