@@ -1,6 +1,6 @@
 CamDex Dataset
 
-This repo will hold the canonical CamDex dataset. It is intentionally separate from the application repo and is a standalone git repo at `git@github.com:cambboyle/camdex-dataset.git`.
+This repo will hold the canonical CamDex dataset. It is intentionally separate from the application repo.
 
 Layout (initial):
 
