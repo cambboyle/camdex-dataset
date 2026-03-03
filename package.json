@@ -1,0 +1,15 @@
+{
+  "name": "camdex-dataset",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "validate": "bun ./scripts/validate.ts",
+    "format": "prettier --write '**/*.json'"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.2.12",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "prettier": "^2.8.8"
+  }
+}
