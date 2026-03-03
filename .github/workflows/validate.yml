@@ -1,0 +1,32 @@
+name: Dataset Validate
+
+on:
+  pull_request:
+    paths:
+      - 'dataset/**'
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validate:
+    name: Validate dataset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dataset deps
+        run: npm ci
+        working-directory: dataset
+
+      - name: Run dataset validator
+        run: npm run validate
+        working-directory: dataset
